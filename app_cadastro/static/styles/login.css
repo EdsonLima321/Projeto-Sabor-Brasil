@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+.brand-header {
+    margin-bottom: 25px;
+}
+
+.brand-title {
+    color: #2E8B57;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.brand-subtitle {
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.login-instruction {
+    color: #495057;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #2E8B57;
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.2);
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2E8B57;
+    /* Removed color: black; */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.login-button a { /* Target the anchor tag inside the button */
+    color: white; /* Set the desired color for the text */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the link fill the button */
+}
+
+.login-button:hover {
+    background-color: #24704a;
+}
+
+.footer-text {
+    margin-top: 25px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 20px;
+    }
+
+    .brand-title {
+        font-size: 28px;
+    }
+}

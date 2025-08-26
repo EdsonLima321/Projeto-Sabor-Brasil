@@ -1,0 +1,33 @@
+{% extends 'usuarios/base.html' %}
+{% load static %}
+
+{% block conteudo %}
+<link rel="stylesheet" href="{% static 'styles/login.css' %}">
+<div class="container">
+  <div class="login-card">
+    <div class="brand-header">
+      <h1 class="brand-title">Sabor Brasil</h1>
+      <p class="brand-subtitle">Bem vindo ao Sabor Brasil</p>
+    </div>
+
+    <p class="login-instruction">Preencha os dados do login para acessar</p>
+
+    <form class="login-form" method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="id_username" class="form-label">Nome de Usuário</label>
+        <input type="text" id="id_username" name="username" class="form-input">
+      </div>
+
+      <div class="form-group">
+        <label for="id_password" class="form-label">Senha</label>
+        <input type="password" id="id_password" name="password" class="form-input">
+      </div>
+
+      <button type="submit" class="login-button">Entrar</button>
+    </form>
+
+    <p class="footer-text">Faça o Login em nossa Plataforma</p>
+  </div>
+</div>
+{% endblock %}

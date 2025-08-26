@@ -1,0 +1,35 @@
+{% extends 'usuarios/base.html' %}
+{% load static %}
+
+{% block conteudo %}
+<link rel="stylesheet" href="{% static 'styles/cadastro.css' %}">
+
+<div class="container">
+  <div class="login-card">
+    <div class="brand-header">
+      <h1 class="brand-title">Sabor Brasil</h1>
+      <p class="brand-subtitle">Crie sua conta</p>
+    </div>
+
+    <form method="post" novalidate>
+      {% csrf_token %}
+
+      {% for field in form %}
+        <div class="form-group">
+          <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+          {% if field.errors %}
+            <div class="form-error">
+              {{ field.errors|striptags }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+
+      <button type="submit" class="login-button">Cadastrar</button>
+    </form>
+
+    <p class="footer-text">Já tem conta? <a href="{% url 'login' %}">Entrar</a></p>
+  </div>
+</div>
+{% endblock %}

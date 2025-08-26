@@ -1,0 +1,115 @@
+{% extends 'usuarios/base.html' %}
+{% load static %}
+
+{% block conteudo %}
+<link rel="stylesheet" href="{% static 'styles/categorias.css' %}">
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="hero-text">
+            <h1>Descubra o Verdadeiro <br><span>Sabor do Brasil</span></h1>
+            <p>Explore as mais autênticas receitas da culinária brasileira, de norte a sul do país. Sabores que contam
+                histórias e tradições.</p>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Busque por receitas...">
+                <button>Buscar</button>
+            </div>
+
+            <div class="tags">
+                <button>Feijoada</button>
+                <button>Brigadeiro</button>
+                <button>Acarajé</button>
+                <button>Pão de Queijo</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Categorias -->
+<section class="categorias">
+    <h2>Receitas por <span>Categorias</span></h2>
+    <p>Todas as suas receitas favoritas</p>
+
+    <div class="cards">
+        <div class="card">
+            <img src="{% static 'imagens/file-mignon.jpg' %}" alt="">
+            <span>Filé Mignon ao Molho</span>
+        </div>
+        <div class="card">
+            <img src="{% static 'imagens/tambaqui.jpg' %}" alt="">
+            <span>Tambaqui</span>
+        </div>
+        <div class="card">
+            <img src="{% static 'imagens/pizza.jpg' %}" alt="">
+            <span>Pizza de Calabresa</span>
+        </div>
+        <div class="card">
+            <img src="{% static 'imagens/caipirinha.jpg' %}" alt="">
+            <span>Caipirinha</span>
+        </div>
+        <div class="card">
+            <img src="{% static 'imagens/pudim.jpg' %}" alt="">
+            <span>Pudim</span>
+        </div>
+        <div class="card">
+            <img src="{% static 'imagens/ratatouille.jpg' %}" alt="">
+            <span>Ratatouille</span>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+    <div class="box">
+        <div class="text">
+            <h2>Receba Nossas <span>Receitas</span></h2>
+            <p>Inscreva-se para receber as melhores receitas brasileiras diretamente no seu email.</p>
+            <input type="email" placeholder="Seu melhor email">
+            <button>Inscrever-se</button>
+            <small>Ao se inscrever, você concorda com nossa política de privacidade.</small>
+        </div>
+        <div class="image">
+            <img src="{% static 'imagens/newsletter.jpg' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="sobre">
+            <h3>Sabor <span>Brasil</span></h3>
+            <p>Descubra o melhor da culinária brasileira com nossas receitas autênticas e saborosas.</p>
+            <div class="social">
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+                <a href="#">🐦</a>
+                <a href="#">▶</a>
+            </div>
+        </div>
+        <div class="links">
+            <h4>Categorias</h4>
+            <ul>
+                <li>Pratos Principais</li>
+                <li>Sobremesas</li>
+                <li>Bebidas</li>
+                <li>Lanches</li>
+                <li>Regional</li>
+            </ul>
+        </div>
+        <div class="links">
+            <h4>Links Úteis</h4>
+            <ul>
+                <li>Sobre Nós</li>
+                <li>Contato</li>
+                <li>Política de Privacidade</li>
+                <li>Termos de Uso</li>
+            </ul>
+        </div>
+    </div>
+    <p class="copy">© 2025 Sabor Brasil. Todos os direitos reservados.</p>
+</footer>
+
+{% endblock %}
