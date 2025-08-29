@@ -8,15 +8,15 @@ def index(request):
 def login(request):
     return render(request,'usuarios/login.html')
 
-def receita(request):
-    return render(request, 'receitas/receita.html')
+def receitas(request):
+    return render(request, 'feijoada.html')
 
 def registrar_usuario(request):
     if request.method == 'POST':
         form = RegistroUsuarioForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login')  # Redireciona após cadastro com sucesso
+            return redirect('login')
     else:
         form = RegistroUsuarioForm()
     return render(request, 'app_cadastro/registro.html', {'form': form})

@@ -4,10 +4,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'home/index.html')
 
-
 def login(request):
     return render(request, 'usuarios/login.html')
 
-def receita(request):
-    return render(request, 'receita/feijoada.html')
+def receitas(request):
+    return render(request, 'receitas/feijoada.html')
 

@@ -12,7 +12,7 @@
 
     <p class="login-instruction">Preencha os dados do login para acessar</p>
 
-    <form class="login-form" method="post" action="{% url 'login' %}">
+    <form class="login-form" method="post" action="{% url 'index' %}">
       {% csrf_token %}
       <div class="form-group">
         <label for="id_username" class="form-label">Nome de Usuário</label>

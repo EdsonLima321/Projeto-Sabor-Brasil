@@ -1,0 +1,94 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Sabor Brasil{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/receitas.css' %}">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#topo">
+                    <h2>Sabor Brasil</h2>
+                </a>
+            </div>
+            <div class="nav-logo">
+                <a href="{% url 'index' %}">
+                    <h2>Sabor Brasil</h2>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'feijoada' %}">Feijoada</a></li>
+
+                {% if user.is_authenticated %}
+                <li><a href="#">Olá, {{ user.username }}</a></li>
+                <li><a href="{% url 'logout' %}">Sair</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Entrar</a></li>
+                <li><a href="{% url 'registrar' %}">Cadastrar</a></li>
+                {% endif %}
+
+                <li><a href="{% url 'sobre' %}">Sobre</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo dinâmico -->
+    <main style="margin-top: 100px;">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer id="sobre">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sabor Brasil</h3>
+                <p>Descubra a riqueza da culinária brasileira com receitas autênticas e elaboradas.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Categorias</h4>
+                <ul>
+                    <li><a href="#">Pratos Principais</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Regionais</a></li>
+                    <li><a href="#">Vegetarianos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Sabor Brasil. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -12,21 +12,22 @@
     </div>
 
     <form method="post" novalidate>
-      {% csrf_token %}
+
 
       {% for field in form %}
-        <div class="form-group">
-          <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
-          {{ field }}
-          {% if field.errors %}
-            <div class="form-error">
-              {{ field.errors|striptags }}
-            </div>
-          {% endif %}
+      <div class="form-group">
+        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.errors %}
+        <div class="form-error">
+          {{ field.errors|striptags }}
         </div>
+        {% endif %}
+      </div>
       {% endfor %}
 
       <button type="submit" class="login-button">Cadastrar</button>
+      {% csrf_token %}
     </form>
 
     <p class="footer-text">Já tem conta? <a href="{% url 'login' %}">Entrar</a></p>

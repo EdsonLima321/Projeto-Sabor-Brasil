@@ -77,10 +77,10 @@ body {
 }
 
 .login-button {
+    color: white;
     width: 100%;
     padding: 12px;
     background-color: #2E8B57;
-    /* Removed color: black; */
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -90,14 +90,15 @@ body {
     margin-top: 10px;
 }
 
-.login-button a { /* Target the anchor tag inside the button */
-    color: white; /* Set the desired color for the text */
-    text-decoration: none; /* Remove underline */
-    display: block; /* Make the link fill the button */
+.login-button a {
+    color: white; 
+    text-decoration: none; 
+    display: block; 
 }
 
 .login-button:hover {
     background-color: #24704a;
+    color: white;
 }
 
 .footer-text {
