@@ -5,7 +5,7 @@ from app_cadastro.forms import RegistroUsuarioForm
 def index(request):
     return render(request, 'home/index.html')
 
-def login(request):
+def login_usuario(request):
     return render(request,'usuarios/login.html')
 
 def receitas(request):

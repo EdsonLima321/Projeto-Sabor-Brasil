@@ -4,7 +4,7 @@ from .forms import RegistroUsuarioForm
 from django.contrib import messages
 
 def index(request):
-    return render(request, 'home/index.html')
+    return render(request, 'index.html')
 
 def registrar_usuario(request):
     if request.method == 'POST':
@@ -21,8 +21,8 @@ def registrar_usuario(request):
 def login_usuario(request):
     if request.method == 'POST':
         username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
+        senha = request.POST['password']
+        user = authenticate(request, username=username, password=senha)
         if user is not None:
             login(request, user)
             return redirect('index')
