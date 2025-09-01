@@ -96,7 +96,7 @@
         <div class="categorias-grid">
             <div class="categoria-item">
                 <i class="fas fa-utensils"></i>
-                <h4>Pratos Principais</h4>
+                <h4><a href="{% url 'categoria' %}">Pratos Principais</a></h4>
             </div>
             <div class="categoria-item">
                 <i class="fas fa-bread-slice"></i>
@@ -131,10 +131,10 @@
         <div class="footer-section">
             <h4>Categorias</h4>
             <ul>
-                <li><a href="#">Pratos Principais</a></li>
+                <li><a href="{% url 'categoria' %}">Pratos Principais</a></li>
                 <li><a href="#">Sobremesas</a></li>
                 <li><a href="#">Regionais</a></li>
-                <li><a href="#">Vegetarianos</a></li>
+                <li><a href="#">Mais</a></li>
             </ul>
         </div>
         <div class="footer-section">
@@ -149,11 +149,20 @@
         <div class="footer-section">
             <h4>Siga-nos</h4>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-pinterest"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/seuPerfil" target="_blank">
+                    <img src="imagens/facebook.png" alt="Facebook" width="30" height="30">
+                </a>
+                <a href="https://www.instagram.com/seuPerfil" target="_blank">
+                    <img src="imagens/instagram.png" alt="Instagram" width="30" height="30">
+                </a>
+                <a href="https://www.pinterest.com/seuPerfil" target="_blank">
+                    <img src="imagens/pinterest.png" alt="Pinterest" width="30" height="30">
+                </a>
+                <a href="https://www.youtube.com/seuPerfil" target="_blank">
+                    <img src="imagens/youtube.png" alt="YouTube" width="30" height="30">
+                </a>
             </div>
+
         </div>
     </div>
     <div class="footer-bottom">

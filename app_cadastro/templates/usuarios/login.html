@@ -12,8 +12,7 @@
 
     <p class="login-instruction">Preencha os dados do login para acessar</p>
 
-    <form class="login-form" method="post" action="{% url 'index' %}">
-      {% csrf_token %}
+    <form class="login-form" method="POST" action="{% url 'index' %}">
       <div class="form-group">
         <label for="id_username" class="form-label">Nome de Usuário</label>
         <input type="text" id="id_username" name="username" class="form-input">
@@ -25,6 +24,7 @@
       </div>
 
       <button type="submit" class="login-button">Entrar</button>
+      {% csrf_token %}
     </form>
 
 

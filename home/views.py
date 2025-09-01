@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from app_cadastro.forms import RegistroUsuarioForm
 
 # Create your views here.
+
 def index(request):
     return render(request, 'home/index.html')
 
@@ -20,3 +21,6 @@ def registrar_usuario(request):
     else:
         form = RegistroUsuarioForm()
     return render(request, 'app_cadastro/registro.html', {'form': form})
+
+def categorias(request):
+    return render(request, 'categorias/categoria.html')

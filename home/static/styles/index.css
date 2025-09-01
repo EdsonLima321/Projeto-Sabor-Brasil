@@ -365,20 +365,32 @@ footer {
 }
 
 .social-icons a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     background-color: #333;
     border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    color: #fff;
+    overflow: hidden; 
     transition: background-color 0.3s;
 }
 
 .social-icons a:hover {
     background-color: #e74c3c;
 }
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
 
 .footer-bottom {
     text-align: center;

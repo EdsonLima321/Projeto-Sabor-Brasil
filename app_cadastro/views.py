@@ -3,6 +3,11 @@ from django.contrib.auth import login, authenticate, logout
 from .forms import RegistroUsuarioForm
 from django.contrib import messages
 
+from django.contrib.auth.decorators import login_required
+
+# Create your views here.
+
+@login_required(login_url='login')
 def index(request):
     return render(request, 'index.html')
 
@@ -21,8 +26,8 @@ def registrar_usuario(request):
 def login_usuario(request):
     if request.method == 'POST':
         username = request.POST['username']
-        senha = request.POST['password']
-        user = authenticate(request, username=username, password=senha)
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             return redirect('index')

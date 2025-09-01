@@ -3,7 +3,6 @@
 
 {% block conteudo %}
 <link rel="stylesheet" href="{% static 'styles/cadastro.css' %}">
-
 <div class="container">
   <div class="login-card">
     <div class="brand-header">
@@ -12,8 +11,6 @@
     </div>
 
     <form method="post" novalidate>
-
-
       {% for field in form %}
       <div class="form-group">
         <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
